@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>BlinkPad Project</title>
+</head>
+<body>
+    <div id="app">
+
+        <div class="container">
+            <!-- Cycle through images array to reduce clutter in html file  -->
+       <div v-for="(image, index) in images" class="image_container">
+           <!-- bind src attribute to image.src sent from script file -->
+           <img :src="image.src" alt="">
+           <div class="button_group">
+               <!-- Onclick to trigger methods in script file -->
+            <button class="decrease" @click="decreaseScore(image, index)"><span>-</span></button>
+            <!-- display score for each image in images array -->
+            <span class="score">{{ image.score }} </span> 
+            <button class="increase" @click="increaseScore(image, index)"><span>+</span></button>
+           </div>
+            
+          
+           
+            
+        </div>
+       </div>
+        
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

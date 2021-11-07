@@ -1,0 +1,105 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set backround images */
+body {
+    background-image: url('./assets/auroraBackground.jpg');
+    background-position: center; 
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;  */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image_container {
+    margin: 10px;
+    width: 35%;
+}
+
+/* Align elements in button group */
+.button_group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for images */
+img {
+    border: whitesmoke 2px solid;
+    display: block;
+    margin: auto;
+     width: 80%;
+     border-radius: 30%;
+     height: 60%;
+}
+
+/* Hover effect for images */
+img:hover {
+    box-shadow: 0px 15px 25px 18px #00000091;
+    transition: all 0.2s;
+}
+
+/* Styling for buttons */
+button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: whitesmoke 2px solid;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 5px 5px 0px 5px;
+}
+
+span {
+   font-size: 30px;
+   color: white;
+}
+
+.decrease:hover {
+    background-color: rgba(248, 47, 47, 0.7);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+.increase:hover {
+    background-color: rgba(9, 197, 9, 0.7);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+
+.score {
+    color: rgb(245, 245, 245);
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+/* Change size of images on screens smaller than 1000px */
+@media only screen and (max-width: 1000px) {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  /* Chnage flex properties on screens smaller than 380px */
+@media only screen and (max-width: 380px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+  }
